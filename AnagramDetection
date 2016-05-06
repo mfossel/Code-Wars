@@ -1,0 +1,27 @@
+public static bool IsAnagram(string test, string original)
+  {
+  
+  if (test.Length != original.Length)
+  {
+        return false;
+  }
+        
+        test = test.ToLower();
+        original = original.ToLower();
+  
+    char[] testSort = test.ToCharArray();
+    char[] originalSort = original.ToCharArray();
+    
+    System.Array.Sort(testSort);
+    System.Array.Sort(originalSort);
+    
+for (int i =0; i <= testSort.Length -1; i++)
+{
+    if (testSort[i] != originalSort[i])
+    {
+    return false;
+    }
+}
+    
+    return true;
+  }
